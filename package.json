@@ -18,10 +18,15 @@
   },
   "homepage": "https://github.com/cheslin23t/Spade#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.5.0",
     "@replit/database": "^2.0.1",
+    "avconv": "^3.1.0",
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express.js": "^1.0.0"
+    "express.js": "^1.0.0",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.3.0",
+    "os": "^0.1.1"
   }
 }

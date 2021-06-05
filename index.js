@@ -1,3 +1,7 @@
+process.on('unhandledRejection', error => {
+    console.log('Error:', error);
+});
+const os = require('os')
 
 require('./express.js')
 const Discord = require("discord.js"),
@@ -5,9 +9,9 @@ const Discord = require("discord.js"),
       fs = require("fs");
 //Command Handler
 client.commands = new Discord.Collection();
+client.queue = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.events = new Discord.Collection();
-
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.log(err);
     files.forEach(file => {
@@ -32,6 +36,3 @@ fs.readdir("./commands/", (err, files) => {
 client.on("ready", () => console.log("Online!"));
 
 client.login(process.env.TOKEN)
-client
-  .on("debug", console.log)
-  .on("warn", console.log)

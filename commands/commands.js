@@ -14,9 +14,10 @@ var embed = new discord.MessageEmbed()
  
   
   message.channel.send(embed)
+  console.log('test')
 }
 exports.config = {
-  aliases: ["pong", "pingpong"],
+  aliases: ["cmds"],
   description: "Shows a list of commands",
   how: "s!cmds"
 }
